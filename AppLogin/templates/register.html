@@ -3,10 +3,39 @@
 
 {% block header %}
 
-<form action="" method="post"> {% csrf_token %}
-{{formu}}
-<input type="submit" value = "Registrase">
-</form>
+<body>
+    <style>
+        .container {
+          width: 50%; 
+          margin: 0 auto; 
+        }
+      </style>
+    <div class="container">
+      <form action="" method="post">
+        {% csrf_token %}
+        
+        <label for="id_username">Nombre de usuario:</label><br>
+        {{ formu.username }}<br><br>
+        
+        <label for="id_password">Contraseña:</label><br>
+        {{ formu.password }}<br><br>
+        
+        <label for="id_conf_password">Confirmar contraseña:</label><br>
+        {{ formu.conf_password }}<br><br>
+        
+        <label for="id_email">Correo electrónico:</label><br>
+        {{ formu.email }}<br><br>
+        
+        <label for="id_age">Edad:</label><br>
+        {{ formu.age }}<br><br>
+        
+        <label for="id_country">País:</label><br>
+        {{ formu.country }}<br><br>
+        
+        <input type="submit" value="Registrarse">
+      </form>
+    </div>
+  </body>
 
 {% endblock %}
 
