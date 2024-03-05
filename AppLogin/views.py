@@ -31,9 +31,9 @@ def register(request):
         
     else:
         
-        formulario = NewUser
+        form = NewUser
     
-    return render(request, "register.html", {"formu":formulario})
+    return render(request, "register.html", {"formu":form})
 
 def complete_register(request):
     
@@ -46,3 +46,71 @@ def index(request):
 def login(request):
     
     return render(request, "login.html")
+
+def contact(request):
+    
+    if request.method == "POST": #importante para verificar que haya confirmado el formulario
+        
+        form = HelpMessage(request.POST) #creamos un formulario
+        
+        if form.is_valid(): #chequeamos que sea valido
+            
+            info_dic = form.cleaned_data #convierte la info a un diccionario de python
+            
+            new_help = Help(
+                title=info_dic["title"],
+                text=info_dic["text"],
+
+                )
+            
+            new_help.save()
+            
+            return render(request, "complete_help.html") #aca ponemos a que pagina queremos que nos lleve
+        
+    else:
+        
+        form = HelpMessage
+    
+    return render(request, "contact.html", {"formu":form})
+
+def complete_help(request):
+    
+    return render(request, "complete_help.html")
+
+def sell_shirt(request):
+    
+    if request.method == "POST": #importante para verificar que haya confirmado el formulario
+        
+        form = FootballShirtForm(request.POST) #creamos un formulario
+        
+        if form.is_valid(): #chequeamos que sea valido
+            
+            info_dic = form.cleaned_data #convierte la info a un diccionario de python
+            
+            new_shirt = FootballShirt(
+                club_country=info_dic["club_country"],
+                year=info_dic["year"],
+                short_sleeve=info_dic["short_sleeve"],
+                status=info_dic["status"],
+                player = info_dic["player"],
+                number = info_dic["number"],
+                price = info_dic["price"]
+                )
+            
+            new_shirt.save()
+            
+            return render(request, "complete_sell.html") #aca ponemos a que pagina queremos que nos lleve
+        
+    else:
+        
+        form = FootballShirtForm    
+    
+    return render(request, "sell_shirt.html", {"formu":form})
+
+def complete_sell(request):
+    
+    return render(request, "complete_sell.html")
+    
+    
+
+

@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% block navbar %}
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+{% endblock %}
+
+{% block header %}
+<h1 class="display-5 fw-bolder text-white mb-2">¿Necesitas ayuda?</h1>
+<p class="lead text-white-50 mb-4">Envíanos un mensaje contándonos tu problema y te responderemos por correo electrónico</p>
+<div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+  <div class="container">
+    <form action="" method="post">
+      {% csrf_token %}
+      
+      <label for="id_title">Título:</label><br>
+      <input type="text" id="id_title" name="title" style="font-size: 18px; width: 300px;"><br><br>
+      
+      <label for="id_text">Cuéntanos tu problema:</label><br>
+      <textarea id="id_text" name="text" style="height: 250px; width: 500px"></textarea><br><br>
+      
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+</div>
+{% endblock %}
