@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+
+{% block navbar %}
+
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+
+{% endblock %}
+
+{% block header %}
+
+<p> Resultados para camisetas de {{club_country}}</p>
+
+{% for result in camisetas %}
+
+    <p>Pais/Club: {{result.club_country}} <br>
+    Año: {{result.year}} <br>
+    Manga Corta: {{result.short_sleeve}} <br>
+    Usado: {{result.status}} <br>
+    Jugador: {{result.player}} <br>
+    Dorsal: {{result.number}} <br>
+    Precio: {{result.price}}
+    </p>
+
+{% endfor %}
+
+
+
+{% endblock %}

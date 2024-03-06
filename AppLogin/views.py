@@ -110,7 +110,26 @@ def sell_shirt(request):
 def complete_sell(request):
     
     return render(request, "complete_sell.html")
+
+def search_offers(request):
     
+    return render(request, "search_offers.html")
+    
+def offers_results(request):
+    
+    if request.GET["club_country"]:
+        
+        club_country = request.GET["club_country"]
+        
+        camisetas = FootballShirt.objects.filter(club_country__icontains = club_country)
+        
+        return render(request, "offers_results.html", {"camisetas" : camisetas, "club_country": club_country })
+    
+    else:
+        
+        respuesta = "No encontramos elementos que coincidan con su criterio de busqueda"
+        
+    return HttpResponse(respuesta)
     
 
 

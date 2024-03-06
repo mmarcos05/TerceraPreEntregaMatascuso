@@ -13,5 +13,7 @@ urlpatterns = [
     path("complete_help/", complete_help),
     
     path("sell_shirt/", sell_shirt, name = "Sell Shirt"),
-    path("complete_sell/", complete_sell)   
+    path("complete_sell/", complete_sell),
+    path("search_offers/", search_offers, name = "Search Offers"),
+    path("offers_results/", offers_results, name = "Offers Results"),   
 ]

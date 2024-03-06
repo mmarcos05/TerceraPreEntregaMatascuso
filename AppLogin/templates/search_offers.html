@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% block navbar %}
+
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+
+{% endblock %}
+
+{% block header %}
+
+<form action="/AppLogin/offers_results/" method="GET">
+
+    <p>Ingrese el club o pais de la camiseta que quiera buscar</p>
+    <input type="text" name="club_country" id="club_country">
+
+    <input type="submit" value="Buscar">
+
+
+
+</form>
+
+{% endblock %}
