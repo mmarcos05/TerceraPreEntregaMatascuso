@@ -10,10 +10,15 @@ Para finalizar y poder ejecutar la pagina, en la aplicacion escribiremos: python
 
 Una vez hecho eso, abriremos nuestro navegador y buscaremos esto: 'http://127.0.0.1:8000/AppLogin' y asi acceder a la pagina de inicio
 
-Una vez en la página de inicio, tendrás varias opciones:
+### Una vez en la página de inicio, tendrás varias opciones:
 
 Registrate: crea una cuenta para poder vender y comprar camisetas.
+
 Inicia Sesion: accede a tu cuenta (la funcionalidad está en desarrollo).
+
 Contactanos: envia una consulta al equipo de soporte si necesitas ayuda.
+
 Compramos tu camiseta: publica una camiseta que quieras vender.
+
 Busqueda de ofertas: busca las camisetas disponibles para comprar.
+
