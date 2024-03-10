@@ -1,17 +1,19 @@
 # TerceraPreEntregaMatascuso
 
-Primero tenemos que poner el la terminal python manage.py runserver
+Antes de comenzar, es importante tener Python instalado en el sistema, para eso visita python.org para instalarlo.
 
-Luego de eso le agregamos a la busqueda /AppLogin
+Luego de eso, en nuestro Visual Studio Code vamos a instalar Django, para eso abrimos una terminal y escribimos: pip install django.
 
-Ahi se abrira nuestra pagina de inicio, donde nos podemos dirigir a varios lugares:
+Una vez instalado todo, tenemos que clonar el repositorio, para eso en la terminal escribimos lo siguiente: git clone https://github.com/mmarcos05/TerceraPreEntre.git
 
-  podemos registrarnos haciendo click en Registrate
+Para finalizar y poder ejecutar la pagina, en la aplicacion escribiremos: python manage runserver.
 
-  podemos enviar una consulta haciando click en Contactanos
+Una vez hecho eso, abriremos nuestro navegador y buscaremos esto: 'http://127.0.0.1:8000/AppLogin' y asi acceder a la pagina de inicio
 
-  podemos vender una camiseta haciendo click en Compramos tu camiseta!
+Una vez en la página de inicio, tendrás varias opciones:
 
-  o podemos buscar camisetas en venta haciendo click en Busqueda de ofertas
-
-El boton de Iniciar sesion funciona pero todavia no hay nada puesto
+Registrate: crea una cuenta para poder vender y comprar camisetas.
+Inicia Sesion: accede a tu cuenta (la funcionalidad está en desarrollo).
+Contactanos: envia una consulta al equipo de soporte si necesitas ayuda.
+Compramos tu camiseta: publica una camiseta que quieras vender.
+Busqueda de ofertas: busca las camisetas disponibles para comprar.
