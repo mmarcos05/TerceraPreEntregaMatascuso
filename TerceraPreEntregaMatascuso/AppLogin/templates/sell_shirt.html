@@ -1,0 +1,50 @@
+{% extends "padre.html" %}
+
+
+{% block header %}
+
+<body>
+    <style>
+        .container {
+          width: 50%; 
+          margin: 0 auto; 
+        }
+      </style>
+    <div class="container">
+      <form action="" method="post">
+        {% csrf_token %}
+        
+        <label for="id_club_country">Pais/Club:</label><br>
+        {{ formu.club_country }}<br><br>
+        
+        <label for="id_year">Año:</label><br>
+        {{ formu.year }}<br><br>
+        
+        <label for="id_short_sleeve">Manga Corta?:</label><br>
+        {{ formu.short_sleeve }}<br><br>
+        
+        <label for="id_status">Usado?:</label><br>
+        {{ formu.status }}<br><br>
+        
+        <label for="id_player">Nombre completo del jugador:</label><br>
+        {{ formu.player }}<br><br>
+        
+        <label for="id_number">Dorsal:</label><br>
+        {{ formu.number }}<br><br>
+
+        <label for="id_price">Precio (pesos argentinos):</label><br>
+        {{ formu.price }}<br><br>
+        
+        <input type="submit" value="Confirmar">
+      </form>
+    </div>
+  </body>
+
+{% endblock %}
+
+
+{% block navbar %}
+
+<a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+
+{% endblock %}
